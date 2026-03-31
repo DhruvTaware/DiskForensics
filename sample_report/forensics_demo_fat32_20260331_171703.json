@@ -1,0 +1,350 @@
+{
+  "report_metadata": {
+    "generator": "DiskForensics v1.0.0",
+    "author": "Edward Marez",
+    "image_path": "sample_images/demo_fat32.dd",
+    "image_filename": "demo_fat32.dd",
+    "image_size_bytes": 2097152,
+    "image_size_human": "2.0 MB",
+    "generated_at": "2026-03-31T17:17:03.371978+00:00",
+    "partition_scheme": "MBR"
+  },
+  "hashes": {
+    "image_path": "sample_images/demo_fat32.dd",
+    "image_size_bytes": 2097152,
+    "image_size_human": "2.0 MB",
+    "computed_at": "2026-03-31T17:17:03.371994+00:00",
+    "full_image_hashes": [
+      {
+        "target": "Full Image (demo_fat32.dd)",
+        "algorithm": "md5",
+        "digest": "a05e868f9aff0cb24b38f12c4269fb20",
+        "start_offset": 0,
+        "length_bytes": 2097152,
+        "size_human": "2.0 MB",
+        "computed_at": "2026-03-31T17:17:03.375390+00:00",
+        "elapsed_seconds": 0.003,
+        "throughput_mbps": 597.99
+      },
+      {
+        "target": "Full Image (demo_fat32.dd)",
+        "algorithm": "sha256",
+        "digest": "c36f7038559310c56b4078403ff1129b6761c66ffed2b03e7817c2fd37be3048",
+        "start_offset": 0,
+        "length_bytes": 2097152,
+        "size_human": "2.0 MB",
+        "computed_at": "2026-03-31T17:17:03.377398+00:00",
+        "elapsed_seconds": 0.002,
+        "throughput_mbps": 1017.65
+      }
+    ],
+    "partition_hashes": [
+      {
+        "target": "Partition 1 (FAT32, LBA 2048-4095)",
+        "algorithm": "sha256",
+        "digest": "7dae27b740800827f4fc52f14fb93ac0c93a03c39b19863306e85fda45cbca60",
+        "start_offset": 1048576,
+        "length_bytes": 1048576,
+        "size_human": "1.0 MB",
+        "computed_at": "2026-03-31T17:17:03.378751+00:00",
+        "elapsed_seconds": 0.001,
+        "throughput_mbps": 983.68
+      }
+    ]
+  },
+  "mbr": {
+    "valid_signature": true,
+    "has_gpt": false,
+    "partition_count": 1,
+    "partitions": [
+      {
+        "index": 1,
+        "bootable": true,
+        "type_id": "0x0B",
+        "type_name": "FAT32",
+        "lba_start": 2048,
+        "lba_end": 4095,
+        "sector_count": 2048,
+        "size_bytes": 1048576,
+        "size_human": "1.0 MB",
+        "chs_first": "0/32/33",
+        "chs_last": "0/65/1"
+      }
+    ]
+  },
+  "fat32": {
+    "valid": true,
+    "error": "",
+    "boot_sector": {
+      "oem_name": "MSDOS5.0",
+      "volume_label": "EVIDENCE",
+      "fs_type": "FAT32",
+      "bytes_per_sector": 512,
+      "sectors_per_cluster": 1,
+      "bytes_per_cluster": 512,
+      "reserved_sectors": 4,
+      "num_fats": 2,
+      "sectors_per_fat": 2,
+      "total_sectors": 2048,
+      "root_cluster": 2,
+      "fat_start_sector": 4,
+      "data_start_sector": 8
+    },
+    "file_count": 2,
+    "deleted_count": 2,
+    "files": [
+      {
+        "name": "REPORT.TXT",
+        "name_short": "REPORT.TXT",
+        "path": "/REPORT.TXT",
+        "is_directory": false,
+        "is_deleted": false,
+        "file_size": 67,
+        "size_human": "67.0 B",
+        "first_cluster": 3,
+        "attributes": "A",
+        "created": "2026-01-10T09:30:00",
+        "modified": "2026-01-10T09:30:00",
+        "accessed": "2026-01-10T00:00:00"
+      },
+      {
+        "name": "EVIDENCE.BIN",
+        "name_short": "EVIDENCE.BIN",
+        "path": "/EVIDENCE.BIN",
+        "is_directory": false,
+        "is_deleted": false,
+        "file_size": 600,
+        "size_human": "600.0 B",
+        "first_cluster": 4,
+        "attributes": "A",
+        "created": "2026-02-14T14:00:00",
+        "modified": "2026-02-14T14:00:00",
+        "accessed": "2026-02-14T00:00:00"
+      }
+    ],
+    "deleted_files": [
+      {
+        "name": "_OTES.TXT",
+        "name_short": "_OTES.TXT",
+        "path": "/_OTES.TXT",
+        "is_directory": false,
+        "is_deleted": true,
+        "file_size": 50,
+        "size_human": "50.0 B",
+        "first_cluster": 6,
+        "attributes": "A",
+        "created": "2026-03-01T10:15:00",
+        "modified": "2026-03-01T10:15:00",
+        "accessed": "2026-03-01T00:00:00"
+      },
+      {
+        "name": "_ASSWD.TXT",
+        "name_short": "_ASSWD.TXT",
+        "path": "/_ASSWD.TXT",
+        "is_directory": false,
+        "is_deleted": true,
+        "file_size": 256,
+        "size_human": "256.0 B",
+        "first_cluster": 7,
+        "attributes": "A",
+        "created": "2025-12-05T23:59:58",
+        "modified": "2025-12-05T23:59:58",
+        "accessed": "2025-12-05T00:00:00"
+      }
+    ]
+  },
+  "recovery": [
+    {
+      "filesystem": "FAT32",
+      "total_deleted": 2,
+      "likely_recoverable": 1,
+      "scan_notes": "FAT32 recovery: 2 deleted entries found. Note: First character of each filename is replaced with '_' (original unknown).",
+      "recovered_files": [
+        {
+          "filesystem": "FAT32",
+          "filename": "_OTES.TXT",
+          "filename_partial": true,
+          "is_directory": false,
+          "file_size": 50,
+          "size_human": "50.0 B",
+          "first_cluster": 6,
+          "likely_recoverable": true,
+          "recovery_notes": "Starting cluster 6 is free. Single-cluster file (50.0 B); likely fully recoverable.",
+          "created": "2026-03-01T10:15:00",
+          "modified": "2026-03-01T10:15:00",
+          "accessed": "2026-03-01T00:00:00"
+        },
+        {
+          "filesystem": "FAT32",
+          "filename": "_ASSWD.TXT",
+          "filename_partial": true,
+          "is_directory": false,
+          "file_size": 256,
+          "size_human": "256.0 B",
+          "first_cluster": 7,
+          "likely_recoverable": false,
+          "recovery_notes": "Starting cluster 7 is no longer free (FAT entry = 0x0FFFFFFF); data has likely been overwritten.",
+          "created": "2025-12-05T23:59:58",
+          "modified": "2025-12-05T23:59:58",
+          "accessed": "2025-12-05T00:00:00"
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2025-12-05T00:00:00",
+      "event_type": "FILE_ACCESSED",
+      "filename": "_ASSWD.TXT",
+      "path": "/_ASSWD.TXT",
+      "file_size": 256,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (access)",
+      "is_deleted": true,
+      "extra": ""
+    },
+    {
+      "timestamp": "2025-12-05T23:59:58",
+      "event_type": "FILE_CREATED",
+      "filename": "_ASSWD.TXT",
+      "path": "/_ASSWD.TXT",
+      "file_size": 256,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (create)",
+      "is_deleted": true,
+      "extra": ""
+    },
+    {
+      "timestamp": "2025-12-05T23:59:58",
+      "event_type": "FILE_DELETED",
+      "filename": "_ASSWD.TXT",
+      "path": "/_ASSWD.TXT",
+      "file_size": 256,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (0xE5 marker)",
+      "is_deleted": true,
+      "extra": "Approximate \u2014 timestamp is last-modified, not deletion time"
+    },
+    {
+      "timestamp": "2025-12-05T23:59:58",
+      "event_type": "FILE_MODIFIED",
+      "filename": "_ASSWD.TXT",
+      "path": "/_ASSWD.TXT",
+      "file_size": 256,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (modify)",
+      "is_deleted": true,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-01-10T00:00:00",
+      "event_type": "FILE_ACCESSED",
+      "filename": "REPORT.TXT",
+      "path": "/REPORT.TXT",
+      "file_size": 67,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (access)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-01-10T09:30:00",
+      "event_type": "FILE_CREATED",
+      "filename": "REPORT.TXT",
+      "path": "/REPORT.TXT",
+      "file_size": 67,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (create)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-01-10T09:30:00",
+      "event_type": "FILE_MODIFIED",
+      "filename": "REPORT.TXT",
+      "path": "/REPORT.TXT",
+      "file_size": 67,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (modify)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-02-14T00:00:00",
+      "event_type": "FILE_ACCESSED",
+      "filename": "EVIDENCE.BIN",
+      "path": "/EVIDENCE.BIN",
+      "file_size": 600,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (access)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-02-14T14:00:00",
+      "event_type": "FILE_CREATED",
+      "filename": "EVIDENCE.BIN",
+      "path": "/EVIDENCE.BIN",
+      "file_size": 600,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (create)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-02-14T14:00:00",
+      "event_type": "FILE_MODIFIED",
+      "filename": "EVIDENCE.BIN",
+      "path": "/EVIDENCE.BIN",
+      "file_size": 600,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (modify)",
+      "is_deleted": false,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-03-01T00:00:00",
+      "event_type": "FILE_ACCESSED",
+      "filename": "_OTES.TXT",
+      "path": "/_OTES.TXT",
+      "file_size": 50,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (access)",
+      "is_deleted": true,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-03-01T10:15:00",
+      "event_type": "FILE_CREATED",
+      "filename": "_OTES.TXT",
+      "path": "/_OTES.TXT",
+      "file_size": 50,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (create)",
+      "is_deleted": true,
+      "extra": ""
+    },
+    {
+      "timestamp": "2026-03-01T10:15:00",
+      "event_type": "FILE_DELETED",
+      "filename": "_OTES.TXT",
+      "path": "/_OTES.TXT",
+      "file_size": 50,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (0xE5 marker)",
+      "is_deleted": true,
+      "extra": "Approximate \u2014 timestamp is last-modified, not deletion time"
+    },
+    {
+      "timestamp": "2026-03-01T10:15:00",
+      "event_type": "FILE_MODIFIED",
+      "filename": "_OTES.TXT",
+      "path": "/_OTES.TXT",
+      "file_size": 50,
+      "filesystem": "FAT32",
+      "source": "Directory Entry (modify)",
+      "is_deleted": true,
+      "extra": ""
+    }
+  ]
+}
