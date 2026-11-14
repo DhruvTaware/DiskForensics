@@ -3,7 +3,7 @@
 **A professional disk image analysis tool for digital forensic investigations.**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 DiskForensics parses raw disk images at the byte level — reading MBR and GPT
 partition tables, FAT32 and NTFS filesystem metadata, recovering deleted files,
